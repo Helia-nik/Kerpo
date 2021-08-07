@@ -169,12 +169,26 @@ li {
 
 .title {
   font-family: "SF Pro Display";
-  font-size: 56px !important;
+ 
+}
+.section-white .title{
+  font-size: 56px ;
   line-height: 1.07143;
   letter-spacing: -0.005em;
   font-weight: 600;
   font-style: normal;
   padding-top: 47px;
+}
+.section-dark .title{
+  font-size: 56px ;
+  line-height: 1.07143;
+  letter-spacing: -0.005em;
+  font-weight: 600;
+  font-style: normal;
+  padding-top: 47px;
+}
+.title > sup{
+  font-size: 0.45em;
 }
 
 .title-sub {
@@ -196,31 +210,55 @@ li {
 /*----------------*/
 
 .grid .title {
-  font-size: 38px !important;
+  font-size: 40px;
+  line-height: 1.1;
+  font-weight: 600;
+  letter-spacing: 0em;
+  margin-top: 53px;
 }
 .grid .title-sub {
-  font-size: 21px !important;
+  font-size: 21px;
+  font-size: 21px;
+  line-height: 1.2381;
+  font-weight: 400;
+  letter-spacing: .016em !important;
 }
 .grid .title-link a {
-  font-size: 17px !important;
+  font-size: 17px ;
 }
-/*-watch now-*/
+/*-stream now-*/
+.streamnow{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+}
+
 .dot {
   height: 18px;
   width: 18px;
-  background-color: #06c;
+  background-color:white;
   border-radius: 50%;
   margin-top: 4px;
+  margin-left: 5px;
 }
 .triangle {
   width: 0;
   height: 0;
   border-top: 5px solid transparent;
   border-bottom: 5px solid transparent;
-  border-left: 7px solid #f3eddf;
+  border-left: 7px solid #4e5124;
   position: absolute;
   margin-top: 4px;
   margin-left: 7px;
+}
+.corman{
+  display: flex;
+  flex-direction: column;
+ 
+}
+.cormanlogo{
+  margin-bottom: 20px;
 }
 /*--*/
 
@@ -284,6 +322,73 @@ li {
   }
 }
 
+@media only screen and (max-width: 1069px) and (min-width: 735px) {
+  .bg-img1{
+    background-image: url("../image/sec1/iphone_12_updated__jepm2xpxncuy_medium.jpg") !important;
+  }
+  .bg-img2{
+    background-image: url("../image/sec2/iphone_12_pro_us__e5oyysg4k0ya_medium.jpg") !important;
+  }
+  .bg-img3{
+    background-image: url("../image/sec3/hero_ipad_pro_non_avail__fcrsmhs4b7ma_medium.jpg") !important;
+  }
+ 
+  .bg-img1, .bg-img3, .bg-img2{
+    height: 570px !important;
+    background-size: 1068px 617px !important;
+  }
+  .child1, .child2, .child3, .child4,.child5, .child6{
+   
+    height: 500px !important;
+  }
+  .grid-item{
+    height: 500px !important;
+  }
+  .child1{
+    background-image: url(../image/grid1/promo_imac__crg641tip4q6_medium.jpg) !important;
+  }
+  .child2{
+    background-image: url(../image/grid2/promo_watch_series_6_lte__f8lrasjnry2y_medium.jpg) !important;
+  }
+  .child3{
+    background-image: url(../image/grid3/promo_bts__bg3cb4kaoqoi_medium.jpg) !important;
+  }
+  .child4{
+    background-image: url(../image/grid4/tile__cauwwcyyn9hy_medium.jpg) !important;
+  }
+  .child5{
+    background-image: url(../image/grid5/tile__cauwwcyyn9hy_medium.jpg) !important;
+  }
+  .child6{
+    background-image: url(../image/grid6/promo_mr_corman__fogppmig13iy_medium.jpg) !important;
+  }
+  .grid .title{
+    font-size: 32px !important;
+  line-height: 1.125 !important;
+  
+  letter-spacing: .002em !important;
+  }
+  .grid .title-sub{
+    font-size: 19px !important;
+  line-height: 1.21053 !important;
+  font-weight: 400 !important;
+  letter-spacing: .012em !important;
+  }
+  .grid .title-link a {
+    font-size: 17px !important;
+    line-height: 1.23536 !important;
+    font-weight: 400 !important;
+  }
+  .title > sup{
+    font-size: 14px !important;
+    font-weight: 800 !important;
+  }
+}
+
+
+
+
+
 .white-text .title,
 .white-text .title-sub {
   color: white;
@@ -322,8 +427,8 @@ li {
   height: 580px;
 }
 .child4 {
-  background-image: url(../image/sec2/promo_arcade__e7ps46tldi62_large.jpg);
-
+  background-image: url(../image/grid4/tile__cauwwcyyn9hy_large.jpg);
+  background-color: #fbfbfd;
   background-position: bottom center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   height: 580px;
@@ -336,7 +441,7 @@ li {
   height: 580px;
 }
 .child6 {
-  background-image: url(../image/sec3/img32.jpg);
+  background-image: url(../image/grid6/promo_mr_corman__fogppmig13iy_large.jpg);
   background-color: #cccccc; /* Used if the image is unavailable */
   background-position: bottom center; /* Center the image */
   background-repeat: no-repeat;
