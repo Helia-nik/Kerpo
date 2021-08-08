@@ -163,6 +163,10 @@ li {
   padding: 12px 0;
   font-size: 14px;
 }
+.undermenu{
+  text-align: center;
+  
+}
 /* =================================================================================== */
 /* ===================================  Main =================================== */
 /* =================================================================================== */
@@ -225,6 +229,12 @@ li {
 }
 .grid .title-link a {
   font-size: 17px ;
+}
+.minicontainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 /*-stream now-*/
 .streamnow{
@@ -362,6 +372,9 @@ li {
   .child6{
     background-image: url(../image/grid6/promo_mr_corman__fogppmig13iy_medium.jpg) !important;
   }
+  .cormanlogo{
+    width: 200px;
+  }
   .grid .title{
     font-size: 32px !important;
   line-height: 1.125 !important;
@@ -370,9 +383,9 @@ li {
   }
   .grid .title-sub{
     font-size: 19px !important;
-  line-height: 1.21053 !important;
-  font-weight: 400 !important;
-  letter-spacing: .012em !important;
+    line-height: 1.21053 !important;
+    font-weight: 400 !important;
+    letter-spacing: .012em !important;
   }
   .grid .title-link a {
     font-size: 17px !important;
@@ -382,6 +395,52 @@ li {
   .title > sup{
     font-size: 14px !important;
     font-weight: 800 !important;
+  }
+  .undermenu{
+    
+    max-width: 500px;
+  }
+  .grid-2-item .title{
+    margin-top: 26px !important;
+  }
+  .grid-4-item .title{
+    margin-top: 26px !important;
+  }
+  .grid-4-item .title-sub{
+    max-width: 200px;
+  }
+  .section-dark .title{
+    font-size: 48px;
+    line-height: 1.08349;
+    font-weight: 600;
+    letter-spacing: -.002em;
+  }
+  .section-white .title{
+    font-size: 48px;
+    line-height: 1.08349;
+    font-weight: 600;
+    letter-spacing: -.002em;
+  }
+  .section-white .title-sub{
+    font-size: 24px;
+    line-height: 1.16667;
+    font-weight: 400;
+    letter-spacing: .009em;
+  }
+  .section-dark .title-sub{
+    font-size: 24px !important;
+    line-height: 1.16667;
+    font-weight: 400;
+    letter-spacing: .009em;
+  }
+  .title-link a{
+    font-size: 19px !important;
+    line-height: 1.21053 !important;
+    font-weight: 400 !important;
+  }
+  .right:after{
+    width: 6px !important;
+    height: 6px !important;
   }
 }
 
@@ -408,11 +467,12 @@ li {
   background-position: bottom center;
   background-repeat: no-repeat;
   height: 580px;
+  background-color: #fafafa;
 }
 
 .child2 {
   background-image: url(../image/sec1/img12.jpg);
-  background-color: #cccccc;
+  background-color: black;
   background-position: bottom center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   height: 580px;
@@ -420,7 +480,7 @@ li {
 
 .child3 {
   background-image: url(../image/sec2/img21.jpg);
-  background-color: #cccccc;
+  background-color: #b2dded;
   background-position: bottom center;
   background-repeat: no-repeat;
 
@@ -435,14 +495,14 @@ li {
 }
 .child5 {
   background-image: url(../image/sec3/tile__cauwwcyyn9hy_large.jpg);
-  background-color: #cccccc; /* Used if the image is unavailable */
+  background-color: #fbfbfb; /* Used if the image is unavailable */
   background-position: bottom center;
   background-repeat: no-repeat;
   height: 580px;
 }
 .child6 {
   background-image: url(../image/grid6/promo_mr_corman__fogppmig13iy_large.jpg);
-  background-color: #cccccc; /* Used if the image is unavailable */
+  background-color:#7dd0c6; /* Used if the image is unavailable */
   background-position: bottom center; /* Center the image */
   background-repeat: no-repeat;
   height: 580px;
