@@ -31,6 +31,8 @@ img {
 
 .df {
   display: flex;
+  align-items: center;
+  
 }
 p,
 h1,
@@ -422,7 +424,7 @@ li {
     letter-spacing: -.002em;
   }
   .section-white .title-sub{
-    font-size: 24px;
+    font-size: 24px !important;
     line-height: 1.16667;
     font-weight: 400;
     letter-spacing: .009em;
@@ -442,8 +444,142 @@ li {
     width: 6px !important;
     height: 6px !important;
   }
+  
 }
 
+@media only screen and (max-width: 734px) {
+  .undermenu{
+    
+    max-width: 320px;
+  }
+  .section-dark .title{
+    font-size: 32px !important;
+    line-height: 1.125 !important;
+    font-weight: 600 !important;
+    letter-spacing: .004em !important;
+  }
+  .section-white .title{
+    font-size: 32px !important;
+    line-height: 1.125 !important;
+    font-weight: 600 !important;
+    letter-spacing: .004em !important;
+  }
+  .section-white .title-sub{
+    font-size: 19px !important;
+    line-height: 1.21053;
+    font-weight: 400;
+    letter-spacing: .012em;
+  }
+  .section-dark .title-sub{
+    font-size: 19px !important;
+    line-height: 1.21053;
+    font-weight: 400;
+    letter-spacing: .012em;
+  }
+  .title-body{
+    font-size: 14px !important;
+    line-height: 1.42859;
+    font-weight: 400;
+    letter-spacing: -.016em;
+    max-width: 180px;
+    text-align: center;
+  }
+  .carrier{
+    margin-top: 10px;
+  }
+  .title-link a{
+    font-size: 17px !important;
+    line-height: 1.23536 !important;
+    font-weight: 400 !important;
+  }
+  .right-white:after{
+    width: 5px !important;
+    height: 5px !important;
+    margin-bottom: 1.5px;
+  }
+  .right:after{
+    width: 5px !important;
+    height: 5px !important;
+    margin-bottom: 1.5px;
+  }
+  .bg-img1{
+    background-image: url("../image/sec1/iphone_12_updated__jepm2xpxncuy_small_2x.jpg") !important;
+  }
+  .bg-img2{
+    background-image: url("../image/sec2/iphone_12_pro_us__e5oyysg4k0ya_small_2x.jpg") !important;
+  }
+  .bg-img3{
+    background-image: url("../image/sec3/hero_ipad_pro_non_avail__fcrsmhs4b7ma_small_2x.jpg") !important;
+  }
+  .bg-img1, .bg-img3, .bg-img2{
+    height: 500px !important;
+    background-size:734px 548px !important;
+  }
+  .title{
+    padding-top: 37px !important;
+  }
+  .child1{
+    background-image: url(../image/grid1/promo_imac__crg641tip4q6_small_2x.jpg) !important;
+  }
+  .child2{
+    background-image: url(../image/grid2/promo_watch_series_6_lte__f8lrasjnry2y_small_2x.jpg) !important;
+  }
+  .child3{
+    background-image: url(../image/grid3/promo_bts__bg3cb4kaoqoi_small_2x.jpg) !important;
+  }
+  .child4{
+    background-image: url(../image/grid4/tile__cauwwcyyn9hy_small_2x.jpg) !important;
+    height: 500px !important;
+    background-size: 734px 285px !important;
+  }
+  .child5{
+    background-image: url(../image/grid5/tile__cauwwcyyn9hy_small_2x.jpg) !important;
+  }
+  .child6{
+    background-image: url(../image/grid6/promo_mr_corman__fogppmig13iy_small_2x.jpg) !important;
+  }
+  .child1, .child2, .child3, .child5, .child6{
+    background-size: 734px 548px !important;
+    height: 500px !important;
+  }
+  .grid-item{
+    height: 500px !important;
+  }
+  .grid .title{
+    font-size: 32px !important;
+    line-height: 1.125 !important;
+    font-weight: 600 !important;
+    letter-spacing: .002em !important;
+    margin: 0 !important;
+  }
+  .grid .title-sub{
+    font-size: 19px !important;
+    line-height: 1.21053 !important;
+    font-weight: 400 !important;
+    letter-spacing: .012em !important;
+    
+  }
+  .grid-4-item .title-sub{
+    max-width: 190px;
+  }
+  .grid-2-item .title{
+    
+    padding-top: 22px !important;
+  }
+  .grid-3-item .title{
+    max-width: 290px;
+  }
+  .grid-4-item .title{
+   
+    padding-top: 22px;
+  }
+  .cormanlogo{
+    width: 200px;
+  }
+  .tvlogo{
+    margin-top: 40px !important;
+  }
+}
 
 
 
@@ -510,12 +646,12 @@ li {
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns:repeat(auto-fit, minmax(353px,1fr));
+  /*grid-template-rows: repeat(3, 1fr);*/
   grid-gap: 10px;
   padding: 10px 10px 10px 10px;
 }
-
+/*
 .grid-1-item {
   grid-area: 1 / 1 / 2 / 2;
 }
@@ -534,7 +670,7 @@ li {
 .grid-6-item {
   grid-area: 3 / 2 / 4 / 3;
 }
-
+*/
 /* arrow right */
 .right:after {
   content: "";
@@ -585,6 +721,9 @@ li {
   -moz-transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+.tvlogo{
+  margin-top: 60px;
 }
 
 /* =================================================================================== */
