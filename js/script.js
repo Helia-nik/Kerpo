@@ -12,6 +12,29 @@
 // }
 
 
+const searchBtn = document.querySelector(".search-nav")
+
+const closeBtn =document.querySelector(".close-btn");
+
+const desktopNav =document.querySelector(".desktop-navbar")
+const serachContainer =document.querySelector(".search-container")
+const overlay =document.querySelector(".overlay")
+
+searchBtn.addEventListener("click" ,()=>{
+    desktopNav.classList.add("hide");
+    serachContainer.classList.remove("hide");
+    overlay.classList.add("show");
+
+})
+
+closeBtn.addEventListener("click" ,()=>{
+    desktopNav.classList.remove("hide");
+    serachContainer.classList.add("hide");
+    overlay.classList.remove("show");
+
+})
+
+
 //mobile version
 
 const menuIconContainer =document.querySelector(".nav .menu-icon-container" );
