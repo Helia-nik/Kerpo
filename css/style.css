@@ -542,6 +542,9 @@ li {
     background-size: 734px 548px !important;
     height: 500px !important;
   }
+  .grid-container{
+    grid-template-columns:repeat(auto-fit, minmax(353px,1fr)) !important;
+  }
   .grid-item{
     height: 500px !important;
   }
@@ -646,7 +649,7 @@ li {
 
 .grid-container {
   display: grid;
-  grid-template-columns:repeat(auto-fit, minmax(353px,1fr));
+  grid-template-columns: repeat(2, 1fr);
   /*grid-template-rows: repeat(3, 1fr);*/
   grid-gap: 10px;
   padding: 10px 10px 10px 10px;
