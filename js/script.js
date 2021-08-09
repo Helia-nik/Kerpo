@@ -14,7 +14,7 @@
 
 const searchBtn = document.querySelector(".search-nav")
 
-const closeBtn =document.querySelector(".close-btn");
+const closeBtn =document.querySelector(".close-container");
 
 const desktopNav =document.querySelector(".desktop-navbar")
 const serachContainer =document.querySelector(".search-container")
