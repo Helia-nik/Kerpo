@@ -455,9 +455,6 @@ li {
     font-size: 1em !important;
     letter-spacing: 0.3px !important;
   }
-  .f3-2 >a:nth-child(1){
-    padding-left: 0px !important;
-  }
   .footer3{
     flex-direction: column-reverse;
   }
@@ -824,24 +821,28 @@ li a{
   margin-bottom: 15px;
  margin-top: 5px;
  display:flex;
-  justify-content: space-between;
+  /*justify-content: space-between;*/
+}
+.f3-1{
+  margin-right: 30px;
 }
 .f3-2{
-  display: flex;
+  /*display: flex;*/
   margin-right: 160px;
- 
+  min-width: 288px;
 }
 .f3-2 a{
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-right: 7px;
+  margin-right: 10px
    ;
 }
 .f3-2-1{
   border-right: 1px solid  #d2d2d7;
 }
+
 .footercontent{
   margin: 0 auto;
-  padding: 17px 0 11px;
+  padding: 17px 22px 11px;
   max-width: 980px;
 }
 li a:hover{
@@ -850,7 +851,7 @@ li a:hover{
 .footer1 a:hover{
   text-decoration: underline;
 }
-.footer3 a:hover{
+
   
 /*--------------- fonts ----------------------*/
 @font-face {
