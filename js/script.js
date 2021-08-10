@@ -1,21 +1,20 @@
 //mobile version navbar
 
 const searchBtn = document.querySelector(".search-nav")
+const closeBtn = document.querySelector(".close-container");
 
-const closeBtn =document.querySelector(".close-container");
+const desktopNav = document.querySelector(".desktop-navbar")
+const serachContainer = document.querySelector(".search-container")
+const overlay = document.querySelector(".overlay")
 
-const desktopNav =document.querySelector(".desktop-navbar")
-const serachContainer =document.querySelector(".search-container")
-const overlay =document.querySelector(".overlay")
-
-searchBtn.addEventListener("click" ,()=>{
+searchBtn.addEventListener("click", () => {
     desktopNav.classList.add("hide");
     serachContainer.classList.remove("hide");
     overlay.classList.add("show");
 
 })
 
-closeBtn.addEventListener("click" ,()=>{
+closeBtn.addEventListener("click", () => {
     desktopNav.classList.remove("hide");
     serachContainer.classList.add("hide");
     overlay.classList.remove("show");
@@ -23,12 +22,26 @@ closeBtn.addEventListener("click" ,()=>{
 })
 
 
-const menuIconContainer =document.querySelector(".nav .menu-icon-container" );
+const menuIconContainer = document.querySelector(".nav .menu-icon-container");
 const navContainer = document.querySelector(".nav-container");
 
 menuIconContainer.addEventListener("click", () => {
     navContainer.classList.toggle("active"),
-    menuIconContainer.classList.toggle("active")
+        menuIconContainer.classList.toggle("active")
 })
+
+
+/* bag desktop */
+const bagBtn = document.querySelector(".desktop-navbar .shop-nav");
+// const hidebag = document.querySelector(".hide-bag");
+const bagDesk=document.querySelector(".bag-desktop");
+const caret=document.querySelector(".bagview")
+
+bagBtn.addEventListener("click", () => {
+    caret.classList.toggle("hide-bag");
+    bagDesk.classList.toggle("hide-bag");
+
+})
+
 
 //mobile version navbar

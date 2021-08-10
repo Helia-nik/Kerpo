@@ -10,16 +10,20 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="image/favicon.jpg">
 
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 </head>
 
 <body>
+
 
     <header>
         <!-------------- Start Main Menu / Header Container -------------->
         <nav>
             <div class="main-header nav-container ">
                 <nav class="main-nav nav move-up">
-                    <ul class=" mobile-navbar ">
+                    <ul class="mobile-navbar">
 
                         <li>
                             <div class="menu-icon-container">
@@ -36,7 +40,7 @@
                         <li class=""><a href="#" class="navLink shop-nav"></a></li>
                     </ul>
 
-                    <ul class="desktop-navbar  move-down ">
+                    <ul class="desktop-navbar move-down">
                         <li class=""><a href="#" class="navLink logo-nav"></a></li>
                         <li class="desktop-menu"><a href="#" class="navLink">Store</a></li>
                         <li class="desktop-menu"><a href="#" class="navLink">Mac</a></li>
@@ -47,7 +51,12 @@
                         <li class="desktop-menu"><a href="#" class="navLink">Music</a></li>
                         <li class="desktop-menu"><a href="#" class="navLink">Support</a></li>
                         <li class="desktop-menu"><a href="#" class="navLink search-nav"></a></li>
-                        <li class=""><a href="#" class="navLink shop-nav"></a></li>
+                        <li class=""><a href="#" class="navLink shop-nav"></a>
+                            <div class="bagview hide-bag" >
+                                <span class="caret"></span>
+                            </div>
+                        </li>
+                        
                     </ul>
 
 
@@ -69,9 +78,8 @@
                     </div>
 
 
-                    <div class="close-container" style="">
-
-                        <button class="close-btn " style="cursor: pointer;">
+                    <div class="close-container">
+                        <button class="close-btn" style="cursor: pointer;">
                             <span class="menu-icon">
                                 <span class="line-1"></span>
                                 <span class="line-2"></span>
@@ -95,6 +103,21 @@
 
                 </div>
 
+                <aside id="container"  class="bag-desktop hide-bag">
+                    <div class="bag-container">
+                        <p>Your Bag is empty.</p>
+                        <ul>
+                            <li>
+                                <a class="bag-icon" href="#">Bag</a>
+                            </li>
+                            <li><a class="bag-fav" href="#">Favorites</a></li>
+                            <li><a class="bag-order" href="#">Orders</a></li>
+                            <li><a class="bag-acc" href="#">Account</a></li>
+                            <li><a class="bag-signin" href="#">Sign in</a></li>
+                        </ul>
+    
+                    </div>
+                </aside>
 
                 <div class="overlay"></div>
 
@@ -106,7 +129,7 @@
 
 
 
-            <div class="navbar-s navbar-item-sub center df navbar-light">
+            <div class="navbar-s navbar-item-sub center df navbar-light" style="z-index: 1;">
                 <span class="undermenu">
                      We look forward to welcoming you to our stores. Whether you <a class="nav-shop" href="">shop in a store </a>or<a class="nav-shop" href=""> shop online</a>, our Specialists can help you buy the products you love.
                 </span>
