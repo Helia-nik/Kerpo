@@ -301,6 +301,65 @@ li {
   a {
     -webkit-top-highlight-color: rgba(0, 0, 0, 0);
   }
+  /**********************footer***********************/
+  .footer3{
+    flex-direction: column-reverse;
+  }
+  .f3-1{
+    
+    margin-top: 12px !important;
+  }
+  .f3-2{
+    order: -1;
+    padding-top: 5px !important;
+  }
+  .f3-3{
+    padding-top: 5px !important;
+    margin-top: 5px !important;
+  }
+  .footer2{
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .footer-list{
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90vw;
+    padding: 10px 0 10px;
+    margin: 0 !important;
+  
+   
+  }
+  
+  .footer-list::after{
+    content: "\002B";
+    transition: transform .3s ease;
+    right: 1rem;
+  }
+.footer-list.active::after{
+  transform: rotate(45deg);
+  transition: transform .3s ease;
+}
+  .listbx{
+    transition: .7s  ;
+    border-bottom:1px solid  #d2d2d7;
+    overflow: hidden;
+    max-height: 0;
+  }
+  .sub-list{
+    padding: 6px 14px;
+
+  }
+  .footer-list.active + .listbx{
+   max-height: 500px; 
+  }
+  .footerp{
+    border: none !important;
+  }
+  
 }
 
 .mobile-menu {
@@ -1223,24 +1282,7 @@ li {
   .tvlogo {
     margin-top: 40px !important;
   }
-  .footer3{
-    flex-direction: column-reverse;
-  }
-  .f3-1{
-    
-    margin-top: 12px !important;
-  }
-  .f3-2{
-    order: -1;
-    padding-top: 5px !important;
-  }
-  .f3-3{
-    padding-top: 5px !important;
-    margin-top: 5px !important;
-  }
-  .footer2{
-    flex-direction: column;
-  }
+  
 }
 
 .white-text .title,
@@ -1430,13 +1472,13 @@ footer a{
 footer li{
   list-style-type: none;
   color: #515154;
- 
+  
 }
-footer h3{
+.footer-list{
   font-size: 12px;
   line-height: 1.33337;
   letter-spacing: -.01em;
-  font-weight: 600;
+  font-weight: 400;
   margin-right: 20px;
   margin-bottom: .8em;
   color: #303033;
@@ -1460,10 +1502,7 @@ li a{
  display:flex;
   justify-content: space-between;
 }
-.f3-2{
-  display: flex;
- 
-}
+
 .f3-2 a{
   padding-right: 7px;
   margin-right: 10px;
