@@ -169,6 +169,7 @@ li {
 }
 .undermenu {
   text-align: center;
+  max-width: 70%;
 }
 /* ===================================  Responsive Navbar =================================== */
 .mobile-navbar {
@@ -1052,6 +1053,7 @@ li {
   .child5,
   .child6 {
     height: 500px !important;
+    width: 100%;
   }
   .grid-item {
     height: 500px !important;
@@ -1098,9 +1100,6 @@ li {
     font-size: 14px !important;
     font-weight: 800 !important;
   }
-  .undermenu {
-    max-width: 500px;
-  }
   .grid-2-item .title {
     margin-top: 26px !important;
   }
@@ -1146,9 +1145,8 @@ li {
 }
 
 @media only screen and (max-width: 734px) {
-  .undermenu {
-    max-width: 320px;
-  }
+  
+  
   .section-dark .title {
     font-size: 32px !important;
     line-height: 1.125 !important;
@@ -1247,6 +1245,7 @@ li {
   }
   .grid-container {
     grid-template-columns: repeat(auto-fit, minmax(353px, 1fr)) !important;
+    padding: 0 !important;
   }
   .grid-item {
     height: 500px !important;
@@ -1283,6 +1282,12 @@ li {
     margin-top: 40px !important;
   }
 
+}
+
+@media only screen and (max-width:360px){
+  html{
+    width:min-content;
+  }
 }
 
 .white-text .title,
