@@ -33,7 +33,6 @@ menuIconContainer.addEventListener("click", () => {
 
 /* bag desktop */
 const bagBtn = document.querySelector(".desktop-navbar .shop-nav");
-// const hidebag = document.querySelector(".hide-bag");
 const bagDesk=document.querySelector(".bag-desktop");
 const caret=document.querySelector(".bagview")
 
