@@ -486,7 +486,7 @@ li {
   .bag-container-mobile{
     width: 100% !important;
     border-radius: 0;
-    top: 0;
+    top: 48px;
     border-color: white !important;
   }
 }
@@ -728,7 +728,7 @@ li {
   height: 100vh;
   left: 0;
   top: 0;
-  z-index: 100;
+  z-index: -100;
 }
 .quick-link {
   letter-spacing: -0.224px;
