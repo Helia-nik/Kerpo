@@ -45,3 +45,22 @@ bagBtn.addEventListener("click", () => {
 
 
 //mobile version navbar
+
+
+
+
+
+
+
+
+
+//mobile footer
+
+
+const accordions =document.querySelectorAll(".footer-list");
+accordions.forEach(accordion => {
+   accordion.addEventListener("click" , () =>{
+       accordion.classList.toggle("active")
+   }) 
+});
+
