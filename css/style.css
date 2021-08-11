@@ -288,14 +288,11 @@ li {
     transform: rotateZ(-45deg);
   }
 
-  /* bag icon animation */
+  /* bag icon animation responsive*/
 
-  /* .nav-container.active .mobile-navbar .shop-nav{
-    transform: translateY();
+  
 
-  } */
-
-  /*/ bag icon animation */
+  /*/ bag icon animation responsive*/
 
   input,
   div,
@@ -574,6 +571,21 @@ li {
   z-index: 7;
   background-color: white;
 }
+.mobile-navbar .caret{
+  bottom: -1px !important;
+
+}
+.mobile-navbar .caret::after{
+  border: 1px solid white !important;
+}
+@media only screen and (max-width: 767px) {
+  .bag-container-mobile{
+    width: 100% !important;
+    border-radius: 0;
+    top: 48px;
+    border-color: white !important;
+  }
+}
 
 /*------------bag desktop-------------*/
 
@@ -809,7 +821,7 @@ li {
   height: 100vh;
   left: 0;
   top: 0;
-  z-index: 100;
+  z-index: -100;
 }
 .quick-link {
   letter-spacing: -0.224px;

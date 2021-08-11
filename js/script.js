@@ -33,13 +33,24 @@ menuIconContainer.addEventListener("click", () => {
 
 /* bag desktop */
 const bagBtn = document.querySelector(".desktop-navbar .shop-nav");
-// const hidebag = document.querySelector(".hide-bag");
 const bagDesk=document.querySelector(".bag-desktop");
-const caret=document.querySelector(".bagview")
+const caret=document.querySelector(".caret-desktop")
 
 bagBtn.addEventListener("click", () => {
     caret.classList.toggle("hide-bag");
     bagDesk.classList.toggle("hide-bag");
+
+})
+
+/*bag mobile*/
+const bagMobilebtn = document.querySelector(".mobile-navbar .shop-nav");
+const bagMobile=document.querySelector(".bag-mobile");
+const caretMobile=document.querySelector(".caret-mobile")
+
+bagMobilebtn.addEventListener("click", () => {
+    caretMobile.classList.toggle("hide-bag");
+    bagMobile.classList.toggle("hide-bag");
+    //overlay.classList.toggle("show");
 
 })
 

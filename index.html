@@ -34,10 +34,12 @@
                             </div>
                         </li>
 
-
-
                         <li class=""><a href="#" class="navLink logo-nav"></a></li>
-                        <li class=""><a href="#" class="navLink shop-nav"></a></li>
+                        <li class=""><a href="#" class="navLink shop-nav"></a>
+                            <div class="bagview caret-mobile hide-bag">
+                                <span class="caret"></span>
+                            </div>
+                        </li>
                     </ul>
 
                     <ul class="desktop-navbar move-down">
@@ -52,15 +54,12 @@
                         <li class="desktop-menu"><a href="#" class="navLink">Support</a></li>
                         <li class="desktop-menu"><a href="#" class="navLink search-nav"></a></li>
                         <li class=""><a href="#" class="navLink shop-nav"></a>
-                            <div class="bagview hide-bag" >
+                            <div class="bagview caret-desktop hide-bag" >
                                 <span class="caret"></span>
                             </div>
                         </li>
                         
                     </ul>
-
-
-
                 </nav>
 
                 <!---- end of navigation menu items--->
@@ -100,35 +99,25 @@
                     </div>
                 </div>
 
-                <div class="mobile-search-container ">
-
-                    <div class="link-search"></div>
-
-                    <div class="input-serach">
-                        <form action="GET">
-                            <input type="text" placeholder="Search apple.com">
-                        </form>
-                    </div>
-
-
-                    <span class="cancel-btn">Cancel</span>
-
-
-                    <div class="quick-link">
-                        <h3>quick links</h3>
-                        <ul>
-                            <li><a href="#">Visiting an Apple Store FAQ</a></li>
-                            <li><a href="#">Shop Apple Store Online</a></li>
-                            <li><a href="#">Accessories</a></li>
-                            <li><a href="#">AirPods</a></li>
-                            <li><a href="#">AirTag</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Bag -->
-                <aside id="container"  class="bag-desktop hide-bag">
+                <aside class="bag-desktop hide-bag">
                     <div class="bag-container">
+                        <p>Your Bag is empty.</p>
+                        <ul>
+                            <li>
+                                <a class="bag-icon" href="#">Bag</a>
+                            </li>
+                            <li><a class="bag-fav" href="#">Favorites</a></li>
+                            <li><a class="bag-order" href="#">Orders</a></li>
+                            <li><a class="bag-acc" href="#">Account</a></li>
+                            <li><a class="bag-signin" href="#">Sign in</a></li>
+                        </ul>
+    
+                    </div>
+                </aside>
+
+               
+                <aside class="bag-mobile hide-bag">
+                    <div class="bag-container bag-container-mobile">
                         <p>Your Bag is empty.</p>
                         <ul>
                             <li>
