@@ -60,7 +60,7 @@ const caretMobile = document.querySelector(".caret-mobile")
 bagMobilebtn.addEventListener("click", () => {
     caretMobile.classList.toggle("hide-bag");
     bagMobile.classList.toggle("hide-bag");
-    overlay.classList.add("show1");
+    overlay.classList.toggle("show1");
 
 })
 
