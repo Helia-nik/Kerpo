@@ -1,5 +1,7 @@
 //mobile version navbar
 
+//search desktop
+
 const searchBtn = document.querySelector(".search-nav")
 const closeBtn = document.querySelector(".close-container");
 
@@ -21,6 +23,13 @@ closeBtn.addEventListener("click", () => {
 
 })
 
+overlay.addEventListener("click", () => {
+    desktopNav.classList.remove("hide");
+    serachContainer.classList.add("hide");
+    overlay.classList.remove("show");
+
+})
+
 
 const menuIconContainer = document.querySelector(".nav .menu-icon-container");
 const navContainer = document.querySelector(".nav-container");
@@ -33,8 +42,8 @@ menuIconContainer.addEventListener("click", () => {
 
 /* bag desktop */
 const bagBtn = document.querySelector(".desktop-navbar .shop-nav");
-const bagDesk=document.querySelector(".bag-desktop");
-const caret=document.querySelector(".caret-desktop")
+const bagDesk = document.querySelector(".bag-desktop");
+const caret = document.querySelector(".caret-desktop")
 
 bagBtn.addEventListener("click", () => {
     caret.classList.toggle("hide-bag");
@@ -44,14 +53,33 @@ bagBtn.addEventListener("click", () => {
 
 /*bag mobile*/
 const bagMobilebtn = document.querySelector(".mobile-navbar .shop-nav");
-const bagMobile=document.querySelector(".bag-mobile");
-const caretMobile=document.querySelector(".caret-mobile")
+const bagMobile = document.querySelector(".bag-mobile");
+const caretMobile = document.querySelector(".caret-mobile")
 
 bagMobilebtn.addEventListener("click", () => {
     caretMobile.classList.toggle("hide-bag");
     bagMobile.classList.toggle("hide-bag");
     //overlay.classList.toggle("show");
 
+})
+
+//search mobile
+
+const searchBar = document.querySelector(".mobile-search-container .search-bar")
+const nav = document.querySelector(".nav-container .nav")
+const searchInput = document.querySelector(".mobile-search-container input")
+// desktopNav
+searchInput.addEventListener("click",() => {
+    searchBar.classList.add("active");
+    nav.classList.add("move-up");
+    desktopNav.classList.add("move-down");
+})
+
+const cancelbtn =document.querySelector(".cancel-btn")
+cancelbtn.addEventListener("click",() => {
+    searchBar.classList.remove("active");
+    nav.classList.remove("move-up");
+    desktopNav.classList.remove("move-down");
 })
 
 
@@ -68,10 +96,10 @@ bagMobilebtn.addEventListener("click", () => {
 //mobile footer
 
 
-const accordions =document.querySelectorAll(".footer-list");
+const accordions = document.querySelectorAll(".footer-list");
 accordions.forEach(accordion => {
-   accordion.addEventListener("click" , () =>{
-       accordion.classList.toggle("active")
-   }) 
+    accordion.addEventListener("click", () => {
+        accordion.classList.toggle("active")
+    })
 });
 
