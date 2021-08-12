@@ -252,6 +252,10 @@ li {
     border-top: 1px solid gray;
     width: 100%;
     font-size: 17px;
+  
+  }
+  .desktop-navbar li{
+    padding: 0 45px !important;
   }
   .nav-container .desktop-navbar li {
     width: 100%;
@@ -392,12 +396,15 @@ li {
   line-height: 1.23536;
   font-weight: 400;
   letter-spacing: -0.022em;
-  /* font-family: "SF Pro Text"; */
+  /* font-family: "SF Pro Text, SF Pro Display"; */
   background-color: #1b1b1b;
   border: 0;
   color: white;
   border-radius:8px ;
   outline: none;
+
+  
+    font-family: "SF Pro Text","Myriad Set Pro","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
 
   /* margin: 0 10px; */
   /* max-width: 584px;
@@ -405,24 +412,33 @@ li {
 }
 
 .mobile-search-container {
-  margin-top: 10px;
   position: relative;
   padding: 0 16px;
   border-bottom: 1px solid #616161;
-  display: block;
-  /* display: flex; */
+
+  display: flex;
+  /* display: block; */
   transform: rotateX(90deg);
-
 } 
-
+.search-bar{
+  margin-bottom: 15px;
+}
+.search-bar.active{
+  margin: 15px 0;
+}
 .nav-container.active .mobile-search-container{
   transform: rotateX(0deg);
 
 }
 
+
 .mobile-search-container .link-search{
   position: absolute;
   left: 12px;
+  display: block;
+  /* top: 15px; */
+  /* top: 10px; */
+  /* background-size: 15px; */
 }
 
 /* nav move up */
@@ -443,7 +459,9 @@ nav .desktop-navbar.move-down li{
 }
 
 .cancel-btn{
-  position: absolute;
+  /* position: absolute; */
+  align-self: center;
+
   top: 0;
   color: #2997ff;
   right: 40px;
@@ -461,6 +479,9 @@ nav .desktop-navbar.move-down li{
   width: 0;
   overflow: hidden;
 
+}
+.mobile-search-container .search-bar{
+  flex:1
 }
 
 .mobile-search-container .search-bar.active + .cancel-btn{
@@ -499,17 +520,22 @@ pointer-events: auto;
   line-height: 28px;
   color: white;
 
-  padding: 16px 0;
+  padding: 8px 0;
   display: inline-block;
   /* baraye inke padding amal kone bayad display ro inline-block bezarim */
   border-bottom: 1px solid #616161;
   width: 100%;
 
 }
+.last-child{
+  border-bottom: none !important;
+}
 .mobile-search-container .quick-link ul li a:hover{
   color:#2997ff;
+  text-decoration: none;
 }
 .mobile-search-container .quick-link h3{
+  margin-top: 10px;
   font-size: 12px;
   line-height: 16.0004px;
   letter-spacing: 0.3px !important;
@@ -830,14 +856,17 @@ pointer-events: auto;
   width: 100%;
   margin: 0 auto;
 }
+
 .search-container form input {
   width: 100%;
   height: 44px;
   border: none;
   background: transparent;
   outline: none;
-  font-family: "SF Pro Text", "Myriad Set Pro", "SF Pro Icons", "Helvetica Neue",
+  font-family: "SF Pro Display", "Myriad Set Pro", "SF Pro Icons", "Helvetica Neue",
     "Helvetica", "Arial", sans-serif;
+
+    
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -915,6 +944,7 @@ pointer-events: auto;
 }
 
 .search-container .quick-link h3 {
+ 
   margin-left: 40px;
   display: block;
   font-size: 12px;
@@ -969,6 +999,19 @@ pointer-events: auto;
   left: 0;
   top: 0;
   z-index: 100; 
+
+  /* vase bag bayad z-index ro -100 bezarim */
+ 
+}
+
+.overlay.show1 {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.48);
+  width: 100%;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  z-index: -100; 
 
   /* vase bag bayad z-index ro -100 bezarim */
  

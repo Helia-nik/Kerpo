@@ -48,6 +48,7 @@ const caret = document.querySelector(".caret-desktop")
 bagBtn.addEventListener("click", () => {
     caret.classList.toggle("hide-bag");
     bagDesk.classList.toggle("hide-bag");
+  
 
 })
 
@@ -59,7 +60,7 @@ const caretMobile = document.querySelector(".caret-mobile")
 bagMobilebtn.addEventListener("click", () => {
     caretMobile.classList.toggle("hide-bag");
     bagMobile.classList.toggle("hide-bag");
-    //overlay.classList.toggle("show");
+    overlay.classList.add("show1");
 
 })
 
