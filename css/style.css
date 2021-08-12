@@ -8,8 +8,10 @@
 
 body,
 html {
-  font-family: "SF Pro Display", "Helvetica Neue", "Helvetica", "Arial",
-    sans-serif;
+  /* font-family: "SF Pro Display", "Helvetica Neue", "Helvetica", "Arial",
+    sans-serif; */
+
+  font-family: "SF Pro Display","SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
   font-size: 17px;
   color: #1d1d1f;
   line-height: 1.47059;
@@ -21,7 +23,14 @@ html {
 
 body {
   margin-top: 44px;
+  /* overflow-y: hidden; */
 }
+
+/* @media only screen and (max-width: 767px) {
+  body{
+    margin-top: 48px;
+  }
+} */
 a {
   text-decoration: none;
 }
@@ -87,33 +96,36 @@ li {
 /* ===================================  Navbar =================================== */
 /* =================================================================================== */
 
-.main-header {
+.nav-container {
   background: #000000cc;
   height: 44px;
-  /* max-height: 48px; */
-  -webkit-backdrop-filter: saturate(180%) blur(20px);
-  backdrop-filter: saturate(180%) blur(20px);
   position: fixed;
   left: 0;
   top: 0;
   right: 0;
-  width: 100%;
   z-index: 300;
+
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
 }
 .main-nav {
-  margin: 0 auto;
   max-width: 1024px;
+  margin: 0 auto;
   padding: 0 12px;
   height: 100%;
+
 }
 .desktop-navbar {
   display: flex;
   justify-content: center;
   align-items: center;
   justify-content: space-between;
+  /* overflow: visible; */
   height: 100%;
-  overflow: visible;
 }
+
+
+/* .nav .desktop-navbar li a */
 .navLink {
   line-height: 44px;
   color: #f5f5f7;
@@ -122,13 +134,15 @@ li {
   font-size: 14px;
   height: 44px;
   display: block;
-  font-family: "SF Pro Text Regular", "Arial", sans-serif;
+  font-family: "SF Pro Display", "SF Pro Text", "Arial", sans-serif;
+  font-style: normal;
   font-weight: 400;
   margin: 0 10px;
-  transform: opacity 400ms;
+  /* transform: opacity 400ms; */
 }
 .navLink:hover {
   opacity: 1;
+  text-decoration: none;
 }
 
 .logo-nav {
@@ -150,7 +164,7 @@ li {
 .navbar-item {
   font-size: 14px;
   letter-spacing: -0.01em;
-  font-family: "SF Pro Text Regular", "Arial", sans-serif;
+  /* font-family: "SF Pro Text Regular", "Arial", sans-serif; */
   font-weight: 400;
 }
 
@@ -164,6 +178,7 @@ li {
   background-color: #f5f5f7;
 }
 .navbar-s {
+  font-family: "SF Pro Display", "Arial", sans-serif;
   padding: 12px 0;
   font-size: 14px;
 }
@@ -172,8 +187,12 @@ li {
   max-width: 70%;
 }
 /* ===================================  Responsive Navbar =================================== */
-.mobile-navbar {
-  display: none;
+.mobile-navbar{
+  display: none ;
+}
+
+.mobile-search-container {
+  display: none ;
 }
 
 @media only screen and (max-width: 767px) {
@@ -233,6 +252,10 @@ li {
     border-top: 1px solid gray;
     width: 100%;
     font-size: 17px;
+  
+  }
+  .desktop-navbar li{
+    padding: 0 45px !important;
   }
   .nav-container .desktop-navbar li {
     width: 100%;
@@ -279,17 +302,23 @@ li {
     transition: 0.5s;
   }
 
-  .menu-icon-container.active .menu-icon .line-1 {
+  .nav-container.active .nav .menu-icon-container .menu-icon .line-1 {
     top: 0;
     transform: rotateZ(45deg);
   }
-  .menu-icon-container.active .menu-icon .line-2 {
+  .nav-container.active .nav .menu-icon-container .menu-icon .line-2 {
     top: 0;
     transform: rotateZ(-45deg);
   }
 
-  /* bag icon animation responsive*/
+  /* bag icon animation responsive hide bag icon
+  when click on seearch-bar*/
 
+  .nav-container.active .mobile-navbar .shop-nav{
+    transform: translateY(8px);
+    opacity: 0;
+    pointer-events: none;
+  }
   
 
   /*/ bag icon animation responsive*/
@@ -358,7 +387,167 @@ li {
   .footerp{
     border: none !important;
   }
+
+ /* serach -mobile */
+.mobile-search-container  input {
+  width: 100%;
+  padding: 12px 36px;
+  font-size: 17px;
+  line-height: 1.23536;
+  font-weight: 400;
+  letter-spacing: -0.022em;
+  /* font-family: "SF Pro Text, SF Pro Display"; */
+  background-color: #1b1b1b;
+  border: 0;
+  color: white;
+  border-radius:8px ;
+  outline: none;
+
   
+    font-family: "SF Pro Text","Myriad Set Pro","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+
+  /* margin: 0 10px; */
+  /* max-width: 584px;
+  margin: 0 auto; */
+}
+
+.mobile-search-container {
+  position: relative;
+  padding: 0 16px;
+  border-bottom: 1px solid #616161;
+
+  display: flex;
+  /* display: block; */
+  transform: rotateX(90deg);
+} 
+.search-bar{
+  margin-bottom: 15px;
+}
+.search-bar.active{
+  margin: 15px 0;
+}
+.nav-container.active .mobile-search-container{
+  transform: rotateX(0deg);
+
+}
+
+
+.mobile-search-container .link-search{
+  position: absolute;
+  left: 12px;
+  display: block;
+  /* top: 15px; */
+  /* top: 10px; */
+  /* background-size: 15px; */
+}
+
+/* nav move up */
+.nav-container nav.move-up{
+  margin-top: -44px !important;
+
+}
+/* desktopn nav move down*/
+nav .desktop-navbar.move-down li:first-child{
+  margin-top: 0px !important;
+
+
+}
+
+nav .desktop-navbar.move-down li{
+  opacity: 0;
+  pointer-events: none;
+}
+
+.cancel-btn{
+  /* position: absolute; */
+  align-self: center;
+
+  top: 0;
+  color: #2997ff;
+  right: 40px;
+  font-weight: 400;
+  cursor: pointer;
+  line-height: 44px;
+
+  transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  font-size: 17px;
+  height: 44px;
+  font-family: "SF Pro Text Regular", "Arial", sans-serif;
+  font-weight: 400;
+  transform: opacity 400ms;
+
+  width: 0;
+  overflow: hidden;
+
+}
+.mobile-search-container .search-bar{
+  flex:1
+}
+
+.mobile-search-container .search-bar.active + .cancel-btn{
+width: 74px !important;
+padding: 0 16px;
+}
+
+
+
+
+.mobile-search-container .search-bar.active ~ .quick-link{
+top: 80px;
+opacity: 1;
+pointer-events: auto;
+}
+
+
+/* quick links of mobile */
+.mobile-search-container .quick-link {
+  position: absolute;
+  top: 80px;
+  background-color: black;
+  left: 0;
+  right: 0;
+  padding: 0 36px;
+  opacity: 0;
+  pointer-events: none;
+  top: 10px;
+}
+
+.mobile-search-container ul li a{
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.4px;
+  line-height: 28px;
+  color: white;
+
+  padding: 8px 0;
+  display: inline-block;
+  /* baraye inke padding amal kone bayad display ro inline-block bezarim */
+  border-bottom: 1px solid #616161;
+  width: 100%;
+
+}
+.last-child{
+  border-bottom: none !important;
+}
+.mobile-search-container .quick-link ul li a:hover{
+  color:#2997ff;
+  text-decoration: none;
+}
+.mobile-search-container .quick-link h3{
+  margin-top: 10px;
+  font-size: 12px;
+  line-height: 16.0004px;
+  letter-spacing: 0.3px !important;
+  font-style: normal;
+  text-transform: uppercase;
+  color: #868686;
+  font-weight: 400;
+  cursor: grab;
+}
+
+
+
 }
 /* end of 767 */
 .mobile-menu {
@@ -369,58 +558,8 @@ li {
   z-index: 100;
   padding: 0 16px;
 }
-/* quick links of mobile */
-.mobile-search-container .quick-link {
-  display: none;
-}
-/* serach -mobile */
-.mobile-search-container input {
-  width: 100%;
-  padding: 12px 36px;
-  font-size: 17px;
-  line-height: 1.23536;
-  font-weight: 400;
-  letter-spacing: -0.022em;
-  /* font-family: "SF Pro Text"; */
-  background-color: #1b1b1b;
-  border: 0;
-  color: white;
-  border-radius:8px ;
-  outline: none;
 
-  /* margin: 0 10px; */
-  /* max-width: 584px;
-  margin: 0 auto; */
-}
 
-.mobile-search-container {
-  margin-top: 10px;
-  position: relative;
-  padding: 0 16px;
-  border-bottom: 1px solid #616161;
-
-} 
-
-.mobile-search-container .link-search{
-  position: absolute;
-  left: 12px;
-}
-/* .cancel-btn{
-  position: absolute;
-  top: 0;
-  color: #06c;
-  right: 0;
-  
-  line-height: 44px;
-
-  transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
-  font-size: 14px;
-  height: 44px;
-  font-family: "SF Pro Text Regular", "Arial", sans-serif;
-  font-weight: 400;
-  transform: opacity 400ms;
-
-} */
 
 /*------------bag desktop-------------*/
 .bag-desktop {
@@ -431,6 +570,7 @@ li {
   margin: 0 auto;
   height: 500px;
   /* margin-right: calc(512px - 50vw); */
+  /* position:fixed; */
 }
 
 .bag-container.hide {
@@ -590,33 +730,33 @@ li {
 /*------------bag desktop-------------*/
 
 /*-------------search box---------------- */
-.close-btn {
+.search-container .close-btn {
   width: 18px;
   height: 44px;
   display: flex;
-  color: #fffefe;
   cursor: pointer;
+
   align-items: center;
   border: none;
   background-color: transparent;
 
-  opacity: 0.8;
-  transition: 1s;
-  transform: all 400ms;
-
+  transition:all 400ms;
+  
   position: absolute;
   top: 0;
   right: 18px;
 }
-.search-container .close-btn:hover {
-  opacity: 1;
-
-  /* transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1); */
+.close-container .close-btn{
+  opacity: 0.8;
 }
+.close-container .close-btn:hover{
+  opacity: 1;
+}
+
 
 .close-container {
   width: 38px;
-  cursor: pointer !important;
+  cursor: pointer;
   display: block;
 
   position: absolute;
@@ -630,11 +770,14 @@ li {
   opacity: 0;
 }
 
+
 .search-container .quick-link ul li {
   opacity: 1;
   transform: translateX(0);
   transition: all 400ms ease;
 }
+
+
 .search-container .quick-link ul li:nth-of-type(1) {
   transition-delay: 120ms;
 }
@@ -660,8 +803,10 @@ li {
 .close-container .line-1,
 .close-container .line-2 {
   background: #86868b;
-  opacity: 0.8;
+  /* opacity: 0.8; */
 }
+
+
 
 /* Close Btn */
 
@@ -675,7 +820,7 @@ li {
 }
 
 .input-search {
-  background-color: turquoise !important;
+  /* background-color: turquoise !important; */
   height: 100%;
   padding: 0;
   margin: 0;
@@ -683,9 +828,7 @@ li {
 
 /* Close Btn */
 
-.search-desktop {
-  height: 100%;
-}
+
 .search-container.hide {
   opacity: 0;
   pointer-events: none;
@@ -698,6 +841,12 @@ li {
   width: 682.66px;
   margin: 0 auto;
   position: fixed;
+
+  /* width: 60%;
+  position: relative;
+  padding: 0 42px;
+  margin: 0 auto; */
+
   top: 0;
   left: 0;
   right: 0;
@@ -707,14 +856,17 @@ li {
   width: 100%;
   margin: 0 auto;
 }
+
 .search-container form input {
   width: 100%;
   height: 44px;
   border: none;
   background: transparent;
   outline: none;
-  font-family: "SF Pro Text", "Myriad Set Pro", "SF Pro Icons", "Helvetica Neue",
+  font-family: "SF Pro Display", "Myriad Set Pro", "SF Pro Icons", "Helvetica Neue",
     "Helvetica", "Arial", sans-serif;
+
+    
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -760,13 +912,41 @@ li {
   width: 100%;
 }
 
-.quick-link {
+
+
+.search-container .quick-link {
+  letter-spacing: -0.224px;
+  /* transition: 5s;
+  transition-delay: 5s; */
+
   border-radius: 0 0 18px 18px;
   padding: 24px 0px 18px 0px;
   background-color: white;
 }
-.quick-link h3 {
-  padding-left: 40px;
+
+.search-container .quick-link h3 {
+  /* opacity: 1; */
+
+  transform: translateX(0);
+  transition :all 400ms ease;
+  transition-delay: 100ms;
+
+  
+}
+.search-container.hide .quick-link h3 {
+  /* opacity: 1; */
+
+  transform: translateX(80px);
+  transition :all 400ms ease;
+  transition-delay: 100ms;
+
+  
+}
+
+.search-container .quick-link h3 {
+ 
+  margin-left: 40px;
+  display: block;
   font-size: 12px;
   line-height: 16.0004px;
   letter-spacing: 0.3px !important;
@@ -777,28 +957,27 @@ li {
   font-weight: 400;
   cursor: grab;
 }
-.quick-link li {
+.search-container .quick-link li {
   margin: 6px 8px 6px 8px;
 }
 .quick-link ul {
   padding-top: 5px;
 }
-.quick-link ul li a {
+.search-container .quick-link ul li a {
   display: inline-block;
   width: 100%;
-  /* margin: 6px 8px 6px 8px; */
   padding: 0 48px 0 48px;
-  /* background-color: #3c67cb; */
-  /* overflow: hidden; */
-}
-.quick-link ul li a:hover {
-  color: #06c !important;
-  background: #f5f5f5;
-  /* opacity: 0.4; */
-  cursor: pointer;
 }
 
-.quick-link li a {
+
+.search-container .quick-link ul li a:hover {
+  color: #06c !important;
+  background: #f5f5f5;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.search-container .quick-link li a {
   font-size: 14px;
   font-weight: 400;
   font-style: normal;
@@ -811,9 +990,7 @@ li {
 .overlay {
   transition: all 400ms ease;
 }
-/* .show{
-  display: block;
-} */
+
 .overlay.show {
   position: fixed;
   background-color: rgba(0, 0, 0, 0.48);
@@ -821,13 +998,27 @@ li {
   height: 100vh;
   left: 0;
   top: 0;
-  z-index: -100;
+  z-index: 100; 
+
+  /* vase bag bayad z-index ro -100 bezarim */
+ 
 }
-.quick-link {
-  letter-spacing: -0.224px;
-  transition: 5s;
-  transition-delay: 5s;
+
+.overlay.show1 {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.48);
+  width: 100%;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  z-index: -100; 
+
+  /* vase bag bayad z-index ro -100 bezarim */
+ 
 }
+
+
+
 
 /*/search box*/
 
@@ -840,6 +1031,19 @@ li {
   opacity: 0;
   transform: scale(0.8);
   pointer-events: none;
+}
+
+.search-container form,.search-container .link-search{
+  opacity: 1;
+  transform: translateX(0);
+  transition :all 400ms ease;
+  transition-delay: 300ms;
+}
+
+
+.search-container.hide form , .search-container.hide .link-search{
+opacity: 0;
+transform: translateX(50px);
 }
 
 .search-container .quick-link ul li {
@@ -860,7 +1064,7 @@ li {
   transition-delay: 180ms;
 }
 .search-container .quick-link ul li:nth-of-type(5) {
-  transition-delay: 180ms;
+  transition-delay: 200ms;
 }
 
 .desktop-navbar li:nth-of-type(1),
@@ -891,7 +1095,7 @@ li {
 
 .desktop-navbar li:nth-of-type(7),
 .desktop-navbar.hide li:nth-of-type(5) {
-  transition-delay: 190ms;
+  transition-delay: 180ms;
 }
 .desktop-navbar li:nth-of-type(8),
 .desktop-navbar.hide li:nth-of-type(4) {
