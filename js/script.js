@@ -1,6 +1,6 @@
 //mobile version navbar
 
-//search desktop
+//search desktop open
 
 const searchBtn = document.querySelector(".search-nav")
 const closeBtn = document.querySelector(".close-container");
@@ -15,6 +15,7 @@ searchBtn.addEventListener("click", () => {
     overlay.classList.add("show");
 
 })
+//search desktop close
 
 closeBtn.addEventListener("click", () => {
     desktopNav.classList.remove("hide");
@@ -30,7 +31,7 @@ overlay.addEventListener("click", () => {
 
 })
 
-
+/* mobile icon*/
 const menuIconContainer = document.querySelector(".nav .menu-icon-container");
 const navContainer = document.querySelector(".nav-container");
 

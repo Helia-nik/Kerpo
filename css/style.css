@@ -230,10 +230,7 @@ li {
     transition: all 1000ms ease;
   }
 
-  .nav-container.active .desktop-navbar {
-    height: 100vh;
-  }
-
+ 
   .nav-container .desktop-navbar li:first-child {
     margin-top: 120px;
   }
@@ -302,6 +299,7 @@ li {
     transition: 0.5s;
   }
 
+
   .nav-container.active .nav .menu-icon-container .menu-icon .line-1 {
     top: 0;
     transform: rotateZ(45deg);
@@ -311,16 +309,27 @@ li {
     transform: rotateZ(-45deg);
   }
 
+ 
+
   /* bag icon animation responsive hide bag icon
   when click on seearch-bar*/
 
+  
   .nav-container.active .mobile-navbar .shop-nav{
-    transform: translateY(8px);
+    transform: translateY(0);
     opacity: 0;
     pointer-events: none;
   }
-  
 
+  .nav-container.active .desktop-navbar {
+    height: 100vh;
+  }
+
+  .nav-container.active .mobile-search-container{
+    transform: rotateX(0deg);
+    transition-delay: 200ms;
+  
+  }
   /*/ bag icon animation responsive*/
 
   input,
@@ -426,10 +435,7 @@ li {
 .search-bar.active{
   margin: 15px 0;
 }
-.nav-container.active .mobile-search-container{
-  transform: rotateX(0deg);
 
-}
 
 
 .mobile-search-container .link-search{
