@@ -6,13 +6,7 @@ const fs = require("fs");
 const server = http.createServer((req, res) => {
   let parsedURL = url.parse(req.url, true);
   let path = parsedURL.path.replace(/^\/+|\/+$/g, "");
-  /**
-   *  /
-   *  /index.html
-   *
-   *  /style.css
-   *  /script.js
-   */
+  
   if (path == "") {
     path = "index.html";
   }
@@ -36,6 +30,9 @@ const server = http.createServer((req, res) => {
            break;
          case "index.html":
            res.writeHead(200, { "Content-type": "text/html" });
+           break;
+         case "apple-nav.svg":
+           res.writeHead(200, {"Content-type": "image/svg+xml"})
        }
       res.end(content);
     }
