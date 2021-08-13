@@ -29,6 +29,10 @@ overlay.addEventListener("click", () => {
     serachContainer.classList.add("hide");
     overlay.classList.remove("show");
 
+    caretMobile.classList.add("hide-bag");
+    bagMobile.classList.add("hide-bag");
+    overlay.classList.remove("show1");
+
 })
 
 /* mobile icon*/
