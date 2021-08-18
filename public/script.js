@@ -1,6 +1,7 @@
 //mobile version navbar
 
 //search desktop open
+const body =document.querySelector(".body");
 
 const searchBtn = document.querySelector(".search-nav")
 const closeBtn = document.querySelector(".close-container");
@@ -13,7 +14,7 @@ searchBtn.addEventListener("click", () => {
     desktopNav.classList.add("hide");
     serachContainer.classList.remove("hide");
     overlay.classList.add("show");
-
+    body.classList.toggle("pos-fixed");
 })
 //search desktop close
 
@@ -21,6 +22,7 @@ closeBtn.addEventListener("click", () => {
     desktopNav.classList.remove("hide");
     serachContainer.classList.add("hide");
     overlay.classList.remove("show");
+    body.classList.toggle("pos-fixed");
 
 })
 
@@ -33,6 +35,9 @@ overlay.addEventListener("click", () => {
     bagMobile.classList.add("hide-bag");
     overlay.classList.remove("show1");
 
+    body.classList.toggle("pos-fixed");
+
+
 })
 
 /* mobile icon*/
@@ -42,6 +47,8 @@ const navContainer = document.querySelector(".nav-container");
 menuIconContainer.addEventListener("click", () => {
     navContainer.classList.toggle("active"),
         menuIconContainer.classList.toggle("active")
+
+        body.classList.toggle("pos-fixed");
 })
 
 
